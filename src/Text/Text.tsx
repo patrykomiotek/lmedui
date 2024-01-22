@@ -1,7 +1,7 @@
 // export function Text() {
 
 // }
-type Props = {
+export type Props = {
   // children: React.ReactNode;
   children: string;
 };
