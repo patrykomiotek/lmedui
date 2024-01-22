@@ -1,3 +1,5 @@
+import { type ComponentProps } from "react";
+
 const palette = {
   emerald: "#2ECC71",
   "peter-river": "#3498DB",
@@ -12,13 +14,24 @@ type Props = {
   label: string;
   color?: Color;
   bgColor?: Color;
-};
+} & ComponentProps<"button">;
+// } & Pick<ComponentProps<"button">, "disabled" | "type">;
 
+// <Button label="Click me" disabled={true} type="submit" />
 export const Button = ({
   label,
   color = "clouds",
   bgColor = "midnight-blue",
+  ...rest
 }: Props) => {
   const styles = { backgroundColor: palette[bgColor], color: palette[color] };
-  return <button style={styles}>{label}</button>;
+  return (
+    <button type="button" style={styles} {...rest}>
+      {label}
+    </button>
+  );
 };
+
+{
+  /* <Button label="Click me" disabled={true} type="submit"  /> */
+}

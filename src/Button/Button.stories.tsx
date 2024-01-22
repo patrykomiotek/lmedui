@@ -36,3 +36,10 @@ export const Red: Story = {
     bgColor: "alizarin",
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    label: "Click me",
+    disabled: true,
+  },
+};
