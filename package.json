@@ -1,8 +1,7 @@
 {
-  "name": "@patrykomiotek/common-ui",
-  "version": "0.0.1",
+  "name": "@lmedui/common-ui",
+  "version": "0.0.3",
   "main": "dist/index.js",
-  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
@@ -42,6 +41,7 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
+    "vite-plugin-dts": "^3.7.1",
     "vite-tsconfig-paths": "^4.2.3"
   }
 }
