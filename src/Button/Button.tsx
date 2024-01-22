@@ -14,6 +14,7 @@ type Props = {
   label: string;
   color?: Color;
   bgColor?: Color;
+  variant?: "ok" | "cancel" | "confirm";
 } & ComponentProps<"button">;
 // } & Pick<ComponentProps<"button">, "disabled" | "type">;
 
@@ -22,9 +23,21 @@ export const Button = ({
   label,
   color = "clouds",
   bgColor = "midnight-blue",
+  variant = "ok",
   ...rest
 }: Props) => {
-  const styles = { backgroundColor: palette[bgColor], color: palette[color] };
+  let backgroundColor = palette[bgColor];
+  if (variant === "ok") {
+    backgroundColor = palette["emerald"];
+  } else if (variant === "cancel") {
+    backgroundColor = palette["alizarin"];
+  } else if (variant === "confirm") {
+    backgroundColor = palette["peter-river"];
+  }
+  const styles = {
+    backgroundColor: backgroundColor,
+    color: palette[color],
+  };
   return (
     <button type="button" style={styles} {...rest}>
       {label}
@@ -32,6 +45,17 @@ export const Button = ({
   );
 };
 
+export const OkButton = (props: Props) => {
+  return <Button {...props} variant="ok" />;
+};
+
 {
   /* <Button label="Click me" disabled={true} type="submit"  /> */
+}
+
+{
+  /* <Button label="Click me" disabled={true} type="submit" variant="ok"  /> */
+}
+{
+  /* <OkButton label="Click me" disabled={true} type="submit"  /> */
 }
