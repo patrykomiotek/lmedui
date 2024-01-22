@@ -1,6 +1,5 @@
 {
   "name": "@patrykomiotek/common-ui",
-  "private": false,
   "version": "0.0.1",
   "main": "dist/index.js",
   "module": "dist/index.js",
