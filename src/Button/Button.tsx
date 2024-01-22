@@ -23,7 +23,7 @@ export const Button = ({
   label,
   color = "clouds",
   bgColor = "midnight-blue",
-  variant = "ok",
+  variant = undefined,
   ...rest
 }: Props) => {
   let backgroundColor = palette[bgColor];
@@ -39,7 +39,12 @@ export const Button = ({
     color: palette[color],
   };
   return (
-    <button type="button" style={styles} {...rest}>
+    <button
+      type="button"
+      className="rounded-md px-3.5 py-2.5 text-md font-semibold  shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
+      style={styles}
+      {...rest}
+    >
       {label}
     </button>
   );

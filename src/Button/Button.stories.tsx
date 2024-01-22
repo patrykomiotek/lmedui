@@ -43,3 +43,24 @@ export const Disabled: Story = {
     disabled: true,
   },
 };
+
+export const OkButton: Story = {
+  args: {
+    label: "Click me",
+    variant: "ok",
+  },
+};
+
+export const CancelButton: Story = {
+  args: {
+    label: "Click me",
+    variant: "cancel",
+  },
+};
+
+export const ConfirmButton: Story = {
+  args: {
+    label: "Click me",
+    variant: "confirm",
+  },
+};
